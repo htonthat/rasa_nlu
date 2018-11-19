@@ -30,8 +30,10 @@ Fixed
 -----
 - Should loading jieba custom dictionaries only once.
 - Set attributes of custom components correctly if they defer from the default
+- If the ``token_name`` is not given in the endpoint configuration, the default
+  value is ``token`` instead of ``None`
 
-[0.13.7] - 2018-10-11
+[0.13.7] - 2018-10-11`
 ^^^^^^^^^^^^^^^^^^^^^
 
 Fixed

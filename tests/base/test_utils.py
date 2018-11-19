@@ -194,3 +194,26 @@ def test_environment_variable_dict_with_prefix_and_with_postfix():
     result = utils.read_yaml(content)
 
     assert result['model']['test'] == 'dir/test/dir'
+
+
+def test_default_token_name():
+    test_data = {
+        'url': 'http://test',
+        'token': 'token'
+    }
+
+    actual = EndpointConfig.from_dict(test_data)
+
+    assert actual.token_name == 'token'
+
+
+def test_custom_token_name():
+    test_data = {
+        'url': 'http://test',
+        'token': 'token',
+        'token_name': 'test_token'
+    }
+
+    actual = EndpointConfig.from_dict(test_data)
+
+    assert actual.token_name == 'test_token'
