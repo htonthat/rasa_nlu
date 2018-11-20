@@ -21,6 +21,7 @@ Changed
 - the http server's ``POST /evaluate`` endpoint returns evaluation results
   for both entities and intents
 - use cloudpickle version 0.6.1
+- replaced ``yaml`` with ``ruamel.yaml``
 
 Removed
 -------
@@ -32,6 +33,7 @@ Fixed
 - Set attributes of custom components correctly if they defer from the default
 - If the ``token_name`` is not given in the endpoint configuration, the default
   value is ``token`` instead of ``None`
+- NLU Server can now handle training data mit emojis in it
 
 [0.13.7] - 2018-10-11`
 ^^^^^^^^^^^^^^^^^^^^^
